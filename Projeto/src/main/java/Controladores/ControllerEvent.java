@@ -3,8 +3,6 @@ package Controladores;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import Eventos.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -12,9 +10,8 @@ import javafx.scene.control.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import javafx.scene.image.ImageView;
 
-public class Controller implements Initializable {
+public class ControllerEvent implements Initializable {
     @FXML
     private ChoiceBox<String> eventBox;
     private String[] evento = {"Terremoto", "Seca", "Ciclone"};
