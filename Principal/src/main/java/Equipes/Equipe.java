@@ -1,4 +1,4 @@
-package TF;
+package Equipes;
 
 public class Equipe {
 

@@ -1,14 +1,13 @@
-package com.example.demo1;
+package Controladores;
 
-import TF.Equipe;
-import TF.Times;
+import Aplicativo.Main;
+import Equipes.*;
+import Equipes.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import java.util.ArrayList;
-
-public class HelloController {
+public class ControladorEquipes {
     Times times = new Times();
     @FXML
     private TextField CodEquip;
@@ -29,6 +28,10 @@ public class HelloController {
     @FXML
     private TextArea txt;
 
+    @FXML
+    protected void botaoInicialVoltarEqui(ActionEvent e){
+        Main.changeScreen("main");
+    }
 
     @FXML
     void cadEquipes() {

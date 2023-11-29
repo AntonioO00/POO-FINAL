@@ -121,5 +121,10 @@
          </font>
       </Label>
       <Label fx:id="LabelLista" alignment="TOP_CENTER" maxHeight="350.0" maxWidth="300.0" minHeight="350.0" minWidth="300.0" prefHeight="350.0" prefWidth="300.0" wrapText="true" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="4" GridPane.valignment="CENTER" />
+      <Button mnemonicParsing="false" onAction="#botaoInicialVoltarEquipamento" text="Voltar" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="5.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
    </children>
 </GridPane>
