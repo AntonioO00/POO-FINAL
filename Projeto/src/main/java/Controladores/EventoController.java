@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class ControllerEvent implements Initializable {
+public class EventoController implements Initializable {
     @FXML
     private ChoiceBox<String> eventBox;
     private String[] evento = {"Terremoto", "Seca", "Ciclone"};

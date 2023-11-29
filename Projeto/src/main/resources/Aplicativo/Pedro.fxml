@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="600.0" maxWidth="500.0" minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #f5f5f4;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ControllerEvent">
+<GridPane maxHeight="600.0" maxWidth="500.0" minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #f5f5f4;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.EventoController">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="166.0" prefWidth="166.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="166.0" prefWidth="166.0" />
