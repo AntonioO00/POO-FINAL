@@ -14,6 +14,7 @@ public class Main extends Application {
     private static Scene equipamentoScene;
     private static Scene equipeScene;
     private static Scene eventoScene;
+    private static Scene atendimentoScene;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -38,7 +39,7 @@ public class Main extends Application {
         stage.getIcons().add(new Image("https://cdn-icons-png.flaticon.com/512/4370/4370758.png"));
 
         Parent fxmlAtendimento = FXMLLoader.load(getClass().getResource("AtendimentoLayout.fxml"));
-        equipeScene = new Scene(fxmlAtendimento, 500, 600);
+        atendimentoScene = new Scene(fxmlAtendimento, 500, 600);
         stage.getIcons().add(new Image("https://cdn-icons-png.flaticon.com/512/4370/4370758.png"));
 
 
@@ -59,6 +60,9 @@ public class Main extends Application {
                 break;
             case "evento":
                 stage.setScene(eventoScene);
+                break;
+            case "Atendimento":
+                stage.setScene((atendimentoScene));
                 break;
         }
     }

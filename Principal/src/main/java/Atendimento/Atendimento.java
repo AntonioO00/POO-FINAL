@@ -1,6 +1,8 @@
 package Atendimento;
 
+import Aplicativo.Main;
 import Equipes.Equipe;
+import javafx.event.ActionEvent;
 
 public class Atendimento {
 
@@ -41,9 +43,12 @@ public class Atendimento {
         equipe = null;
     }
 
+    protected void botaoInicialVoltarEquipamento(ActionEvent e){
+        Main.changeScreen("equipamento");
+    }
+}
+
   //  public double calculaCusto(){
     //    double custoEquipe = duracao*250*equipe.getQuantidade();
 
     //}
-
-}

@@ -33,8 +33,29 @@
          </GridPane.margin>
       </Button>
       <Button fx:id="botaoTerremoto" mnemonicParsing="false" onAction="#setVisibleTerremoto" text="Terremoto" GridPane.columnIndex="1" />
-      <TextField fx:id="textRecebe2" promptText="Magnitude" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-      <TextField fx:id="textRecebe" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="2" />
+      <Button fx:id="cadAtendimento" mnemonicParsing="false" onAction="#cadAtend" text="Cadastrar novo atendimento" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <TextField fx:id="textRecebe2" visible="false" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></TextField>
+      <TextField fx:id="textRecebe" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets top="15.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="codAtend" promptText="Código do atendimento" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TextField fx:id="duracao" promptText="Duração" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets top="15.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="datInicio" promptText="Data de início" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets top="15.0" />
+         </GridPane.margin>
+      </TextField>
    </children>
 </GridPane>

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<GridPane fx:id="JanelaInicial" maxHeight="600.0" maxWidth="500.0" minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ControladorPrincipal">
+<GridPane fx:id="JanelaInicial" maxHeight="600.0" maxWidth="500.0" minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ControladorPrincipal">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -16,13 +20,29 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button maxWidth="150.0" minWidth="150.0" mnemonicParsing="false" onAction="#botaoInicialEquipamento" prefWidth="150.0" text="Cadastrar equipamentos" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Button maxWidth="230.0" minWidth="230.0" mnemonicParsing="false" onAction="#botaoInicialEquipamento" prefWidth="230.0" text="Cadastrar equipamentos" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
       <Label text="ACMERescue" textAlignment="JUSTIFY" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Button maxWidth="150.0" minWidth="150.0" mnemonicParsing="false" onAction="#botaoInicialEquipe" prefWidth="150.0" text="Equipe" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-      <Button maxWidth="150.0" minWidth="150.0" mnemonicParsing="false" onAction="#botaoInicialEvento" prefWidth="150.0" text="Evento" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Button maxWidth="230.0" minWidth="230.0" mnemonicParsing="false" onAction="#botaoInicialEquipe" prefWidth="230.0" text="Equipe" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button maxWidth="230.0" minWidth="230.0" mnemonicParsing="false" onAction="#botaoInicialEvento" prefWidth="230.0" text="Evento" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></Button>
+      <Label text="Serviços de atendimento a desastres naturais" textAlignment="JUSTIFY" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets top="70.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button maxWidth="230.0" minWidth="230.0" mnemonicParsing="false" onAction="#botaoInicialAtendimento" prefWidth="230.0" text="Atendimento" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="40.0" />
+         </GridPane.margin>
+      </Button>
    </children>
 </GridPane>

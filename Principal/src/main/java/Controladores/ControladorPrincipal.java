@@ -20,4 +20,6 @@ public class ControladorPrincipal {
     protected void botaoInicialEvento(ActionEvent e){
         Main.changeScreen("evento");
     }
+
+    public void botaoInicialAtendimento(ActionEvent actionEvent) {Main.changeScreen("Atendimento");}
 }
