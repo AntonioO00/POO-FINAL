@@ -37,6 +37,11 @@ public class Main extends Application {
         eventoScene = new Scene(fxmlEvento, 500, 600);
         stage.getIcons().add(new Image("https://cdn-icons-png.flaticon.com/512/4370/4370758.png"));
 
+        Parent fxmlAtendimento = FXMLLoader.load(getClass().getResource("AtendimentoLayout.fxml"));
+        equipeScene = new Scene(fxmlAtendimento, 500, 600);
+        stage.getIcons().add(new Image("https://cdn-icons-png.flaticon.com/512/4370/4370758.png"));
+
+
         primaryStage.setScene(mainScene);
         primaryStage.show();
     }
