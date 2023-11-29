@@ -18,7 +18,7 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="backButton" mnemonicParsing="false" onAction="#botaoInicial" text="Back" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#botaoInicial" text="Voltar" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="TOP">
          <GridPane.margin>
             <Insets left="20.0" top="10.0" />
          </GridPane.margin>
@@ -26,7 +26,7 @@
             <Font size="10.0" />
          </font>
       </Button>
-      <Label text="Selecione um Tipo de Evento" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+      <Label fx:id="labelSeleciona" text="Selecione um Tipo de Evento" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets top="30.0" />
          </GridPane.margin>
@@ -122,6 +122,8 @@
             <Insets top="40.0" />
          </GridPane.margin>
       </Button>
+      <Button fx:id="sairButton" mnemonicParsing="false" onAction="#Devolve" text="sair" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Label fx:id="labelMostrar" alignment="TOP_CENTER" maxHeight="350.0" maxWidth="300.0" minHeight="350.0" minWidth="300.0" prefHeight="350.0" prefWidth="300.0" textAlignment="JUSTIFY" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
       <Label fx:id="labelExibe" minHeight="10.0" minWidth="500.0" prefHeight="100.0" prefWidth="50.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets top="50.0" />

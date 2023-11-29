@@ -75,6 +75,15 @@ public class EventoController implements Initializable {
     @FXML
     private ScrollPane pane;
 
+    @FXML
+    private Label labelMostrar;
+
+    @FXML
+    private Label labelSeleciona;
+
+    @FXML
+    private Button sairButton;
+
 
     Gerenciador gerenciador = new Gerenciador();
     Alert alert = new Alert(AlertType.INFORMATION);
@@ -86,12 +95,14 @@ public class EventoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Clear();
+        eventBox.setVisible(true);
+        labelSeleciona.setVisible(true);
         eventBox.getItems().addAll(evento);
         eventBox.setOnAction(event -> eventoBox());
     }
 
     @FXML
-    protected void botaoInicial(ActionEvent e){
+    protected void botaoInicial(ActionEvent e) {
         Main.changeScreen("main");
     }
 
@@ -117,8 +128,15 @@ public class EventoController implements Initializable {
         labelExibe.setText(x);
     }
 
+    public void mostrar(String x) {
+        labelMostrar.setText(x);
+    }
+
 
     public void Clear() {
+        labelMostrar.setVisible(false);
+
+
         labelCodigo.setVisible(false);
         labelLatitude.setVisible(false);
         labelLongitude.setVisible(false);
@@ -139,9 +157,23 @@ public class EventoController implements Initializable {
         limparButton.setVisible(false);
         exibirButton.setVisible(false);
 
+        labelSeleciona.setVisible(false);
+        eventBox.setVisible(false);
+        sairButton.setVisible(false);
+
+    }
+
+    public void Pega() {
+        labelMostrar.setVisible(true);
+//        sairButton.setVisible(true);
+        limparButton.setVisible(true);
+
     }
 
     public void Toma() {
+
+        labelSeleciona.setVisible(true);
+        eventBox.setVisible(true);
 
         labelCodigo.setVisible(true);
         labelLatitude.setVisible(true);
@@ -160,6 +192,13 @@ public class EventoController implements Initializable {
 
     }
 
+    public void Devolve() {
+        Toma();
+        sairButton.setVisible(false);
+        labelMostrar.setVisible(false);
+
+    }
+
     public void Limpa() {
         textCodigo.setText(null);
         textLatitude.setText(null);
@@ -168,21 +207,23 @@ public class EventoController implements Initializable {
         textExtra2.setText(null);
         dataPicker.getEditor().clear();
         labelExibe.setText(null);
+        labelMostrar.setVisible(false);
+        eventBox.setVisible(true);
+
+        Toma();
+        labelMostrar.setVisible(false);
+        labelSeleciona.setVisible(false);
     }
 
 
     public void clickButton() {
         try {
-
-
             String codigo = textCodigo.getText();
             String data = dataPicker.getEditor().getText();
             double longitude = Double.parseDouble(textLongitude.getText());
             double latitude = Double.parseDouble(textLatitude.getText());
             String selectedEvent = eventBox.getValue();
-
             Evento e = null;
-
             if (selectedEvent.equals("Terremoto")) {
                 double magnitude = Double.parseDouble(textExtra.getText());
                 e = new Terremoto(codigo, data, longitude, latitude, magnitude);
@@ -192,7 +233,6 @@ public class EventoController implements Initializable {
                     alert.setHeaderText(null);
                     alert.setContentText("CADASTRADO COM SUCESSO");
                     alert.showAndWait();
-
                 } else {
                     Limpa();
                     erro.setTitle("STATUS");
@@ -200,7 +240,6 @@ public class EventoController implements Initializable {
                     erro.setContentText("ERRO: NÃO FOI POSSIVEL REALIZAR O CADASTRO");
                     erro.showAndWait();
                 }
-
             } else if (selectedEvent.equals("Ciclone")) {
                 double velocidade = Double.parseDouble(textExtra.getText());
                 double precipitacao = Double.parseDouble(textExtra2.getText());
@@ -219,7 +258,6 @@ public class EventoController implements Initializable {
                     erro.setContentText("ERRO: NÃO FOI POSSIVEL REALIZAR O CADASTRO");
                     erro.showAndWait();
                 }
-
 
             } else if (selectedEvent.equals("Seca")) {
                 int estiagem = Integer.parseInt(textExtra.getText());
@@ -251,25 +289,24 @@ public class EventoController implements Initializable {
             labelExibe.setText("Erro :" + e.getMessage());
         }
 
-
     }
 
     public void exibeTodos() {
         ArrayList<Evento> eves = gerenciador.getEventos();
-        if (eves.isEmpty()){
+        if (eves.isEmpty()) {
             erro.setTitle("STATUS");
             erro.setHeaderText(null);
             erro.setContentText("NÃO EXISTE EVENTOS CADASTRADOS");
             erro.showAndWait();
 
-        }
-        else {
+        } else {
+            Clear();
+            Pega();
+            String texto = "";
             for (Evento e : eves) {
-                alert.setTitle("EVENTO");
-                alert.setHeaderText("MOSTRANDO EVENTO INDIVUDUALMENTE");
-                alert.setContentText(gerenciador.toString(e));
-                alert.showAndWait();
+                texto += gerenciador.toString(e);
             }
+            mostrar(texto);
         }
     }
 
